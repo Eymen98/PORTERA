@@ -1,0 +1,117 @@
+:root {
+  --policy-bg-1: #09474d;
+  --policy-bg-2: #09474d;
+  --policy-text: #f6feff;
+  --policy-line: rgba(255, 255, 255, 0.18);
+  --policy-card: rgba(255, 255, 255, 0.08);
+  --policy-card-border: rgba(255, 255, 255, 0.12);
+  --policy-muted: rgba(255, 255, 255, 0.88);
+}
+
+body.policy-page {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--policy-text);
+  background:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(180deg, var(--policy-bg-1), var(--policy-bg-2));
+  background-size: 120px 120px, 120px 120px, cover;
+  
+}
+
+.policy-shell {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.policy-hero {
+  text-align: center;
+  padding: 60px 0 24px;
+}
+
+.policy-title {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 0 0 22px;
+  letter-spacing: -0.03em;
+}
+
+.policy-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.policy-divider {
+  height: 1px;
+  width: 100%;
+  background: var(--policy-line);
+  margin: 26px 0 34px;
+}
+
+.policy-card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--policy-card);
+  border: 1px solid var(--policy-card-border);
+  border-radius: 24px;
+  padding: 42px 46px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+#policyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 1.06rem;
+  line-height: 1.95;
+  color: var(--policy-muted);
+}
+
+#policyContent p {
+  margin: 0;
+}
+
+html[dir="rtl"] .policy-hero,
+html[dir="rtl"] .policy-card,
+html[dir="rtl"] #policyContent {
+  text-align: right;
+}
+
+html[dir="rtl"] .desktop-policy-nav,
+html[dir="rtl"] .mobile-policy-nav {
+  direction: rtl;
+}
+
+@media (max-width: 768px) {
+  .policy-shell {
+    padding: 24px 16px 48px;
+  }
+
+  .policy-hero {
+    padding: 28px 0 16px;
+  }
+
+  .policy-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  #policyContent {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+}

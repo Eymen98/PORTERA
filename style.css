@@ -1,0 +1,260 @@
+:root {
+  --BODY: #09474d;
+  --TEXT: #f6feff;
+  --NAVBAR : #f0f0f0;
+}
+
+/* =========================
+   Base
+========================= */
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+/* Fix anchor scroll under sticky navbar */
+ #hizmelter{
+  scroll-margin-top: 40px;
+}
+#hakkında {
+  scroll-margin-top: 70px;
+}  
+
+
+
+/* =========================
+   Navbar
+========================= */
+
+.nav-link {
+  padding: 8px 14px;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+  color:  #09474d;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: rgba(3, 101, 153, 0.3);
+}
+
+.nav-link.active {
+  background: rgba(3, 101, 153, 0.3);
+  color: #15474b;
+  
+}
+
+header.scrolled {
+  background: rgba(240,240,240,.7);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+   Section Divider
+========================= */
+.section-divider {
+  width: 70%;
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,.5), transparent);
+}
+
+/* =========================
+   Services
+========================= */
+.service-card {
+  position: relative;
+  height: 340px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.service-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  z-index: 0;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+  transition: opacity 0.4s ease;
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.service-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.service-card:hover::after {
+  opacity: 0.9;
+}
+
+.service-card:hover .service-overlay {
+  transform: translateY(-10px);
+}
+
+/* RTL adjustments for content */
+html[dir="rtl"] .service-overlay,
+html[dir="rtl"] #hakkında,
+html[dir="rtl"] footer {
+  text-align: right;
+}
+
+
+/* =========================
+   Language Dropdown
+========================= */
+.lang-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #1f2937;
+  background: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.lang-item:hover {
+  background: #f3f4f6;
+}
+
+html[dir="rtl"] .lang-item {
+  text-align: right;
+}
+
+
+.lang-toggle{
+  background-color: rgb(219, 217, 209);
+}
+
+.lang-toggle:hover{
+  background-color: #abc5ec;
+  
+}
+.iconn{
+  color: #09264d;
+  
+}
+
+
+/* =========================
+   Contact Page - Arabic Fix
+========================= */
+/* html[dir="rtl"] .contact-info-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card h2 {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  column-gap: 16px;
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4 i,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 i {
+  grid-column: 2;
+  justify-self: end;
+  margin: 0;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4 span,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 div {
+  grid-column: 1;
+  text-align: right;
+  width: auto;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 div p {
+  text-align: right;
+}
+ */
+
+
+/* =========================
+   Contact Page - Arabic Fix
+========================= */
+html[dir="rtl"] .contact-info-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card h2 {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  width: fit-content;
+  margin-left: auto;
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4 span,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 div,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 div p {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-info-card > .flex.items-center.gap-4 i,
+html[dir="rtl"] .contact-info-card > .flex.items-start.gap-4 i {
+  margin: 0;
+  flex-shrink: 0;
+} 
+
+
+html[dir="rtl"] .sm\:flex-row {
+  direction: rtl;
+}
+
+/* =========================
+   Mobile Menu RTL
+========================= */
+html[dir="rtl"] #mobileMenu {
+  text-align: right;
+}

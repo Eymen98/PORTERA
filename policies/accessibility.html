@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erişilebilirlik | PORTERA</title>
+  <link rel="icon" type="image/icon"  href="../images/icon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="policy.css">
+</head>
+
+<body data-policy="accessibility" class="policy-page">
+  <header class="sticky top-0 z-50 bg-[var(--NAVBAR)] backdrop-blur border-b border-[var(--TEXT)]/30">
+    <div class="max-w-7xl 2xl:max-w-[1800px] mx-auto flex items-center justify-between px-6 py-0 md:py-1 2xl:px-0">
+      <div class="flex items-center gap-2">
+        <a href="../index.html#anasayfa">
+          <img src="../images/logo1.png" alt="Portera" class="h-[70px] md:h-[80px] w-auto object-contain" />
+        </a>
+      </div>
+
+      <nav class="desktop-policy-nav hidden md:flex gap-3 text-md">
+        <a id="navFaq" href="../index.html" class="nav-link">ANASAYFA</a>
+        <a id="navAbout" href="../index.html#hakkında" class="nav-link">HAKKINDA</a>
+        <a id="navContact" href="../contact.html" class="nav-link">İLETİŞİM</a>
+      </nav>
+
+      <button id="navToggle" class="md:hidden border border-[var(--TEXT)] bg-[var(--BODY)] rounded-full px-4 py-2">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t border-[var(--TEXT)]/20 bg-[var(--NAVBAR)]/90 backdrop-blur">
+      <nav class="mobile-policy-nav flex flex-col px-6 py-4 gap-4">
+        <a id="mobileNavFaq" onclick="toggleMenu()" href="../index.html" class="nav-link">ANASAYFA</a>
+        <a id="mobileNavAbout" onclick="toggleMenu()" href="../index.html#hakkında" class="nav-link">HAKKINDA</a>
+        <a id="mobileNavContact" onclick="toggleMenu()" href="../contact.html" class="nav-link">İLETİŞİM</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="policy-shell">
+    <section class="policy-hero">
+      <div id="policyBrand" class="text-lg md:text-xl font-semibold mb-6">PORTERA</div>
+      <h1 id="policyTitle" class="policy-title">Erişilebilirlik Bildirimi</h1>
+      <div id="policyUpdated" class="policy-badge">Son Güncelleme: 05 Şubat 2026</div>
+    </section>
+
+    <div class="policy-divider"></div>
+
+    <section class="policy-card">
+      <div id="policyContent"></div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+  <script src="policy.js"></script>
+</body>
+</html>
